@@ -1,0 +1,762 @@
+
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://i.postimg.cc/zDFp2Zzg/Football-Soccer-Stadium-Top-View-Crowdy-Atmosphere-Background-Wallpaper-Image-For-Free-Download-Pn.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  filter: blur(5px);/* Increase this for stronger dim */
+  z-index: 0;
+}
+
+/* === Custom Overlay for Home Section === */
+#home {
+  position: relative;
+  background: url('your-image-url.png') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  z-index: 1;
+}
+
+
+
+#home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+#home h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+#home p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #eee;
+}
+h1, h2, h3 {
+  color: #cccccc; /* cool soft grey */
+  font-weight: bold;
+}
+
+.vision-section, .mission-section, .story-section {
+  position: relative;
+  overflow: hidden;
+  color: white; /* White text */
+}
+
+.vision-section .overlay,
+.mission-section .overlay,
+.story-section .overlay {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity */
+  z-index: 1;
+}
+
+.vision-section .content,
+.mission-section .content,
+.story-section .content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+
+.vision-section p,
+.mission-section p {
+  color: white;
+  font-weight: 500;
+}
+h2 {
+  color: white;
+  font-weight: bold;
+}
+
+#about h2 {
+  color: white;
+  font-weight: bold;
+}
+
+.about-section p {
+  color: white;
+  font-weight: 500;
+}
+
+.about-section h3 {
+  color: white;
+  font-weight: bold;
+}
+
+.bg-section h2, .bg-section h3 {
+  color: white;
+  font-weight: bold;
+}
+
+.bg-section p {
+  color: white;
+}
+
+/* Dark background with white font for Vision, Mission, Story */
+.vision-section,
+.mission-section,
+.story-section {
+  background-color: #222; /* Dark grey/black background */
+  color: #fff;            /* White text */
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Headings styling */
+.vision-section h2,
+.mission-section h2,
+.story-section h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Paragraphs styling */
+.vision-section p,
+.mission-section p,
+.story-section p {
+  color: #f1f1f1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+/* Headings Font */
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+  font-weight: bold;
+}
+
+
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Layout */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 999;
+}
+
+/* Logo stays left */
+.logo img {
+  max-height: 50px;
+  background-color: white;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+/* Desktop Nav (Right aligned) */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+/* Menu links */
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Hamburger toggle */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .menu-toggle:checked + .menu-icon + .navbar {
+    display: flex;
+  }
+}
+
+.page-wrapper {
+  flex: 1;
+}
+
+
+.hero-section {
+  text-align: center;
+  padding: 20px 20px 40px;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 64, 128, 0.7)), 
+              url('https://i.postimg.cc/zDFp2Zzg/Football-Soccer-Stadium-Top-View-Crowdy-Atmosphere-Background-Wallpaper-Image-For-Free-Download-Pn.jpg') no-repeat center center;
+  background-size: cover;
+}
+.hero-logo {
+  width: 250px; /* reduced size */
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6), 0 0 24px rgba(0, 153, 255, 0.4);
+}
+
+
+.main-heading {
+  font-size: 3.5rem; /* Increased from 3.5rem */
+  color: #ffffff;
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  padding: 20px 40px;
+  margin: 50px auto;
+  display: inline-block;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+  border: 2px solid #2e2e30;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 14px rgba(76, 139, 245, 0.4);
+}
+.tagline {
+  font-size: 2rem; /* Increased from 1.6rem */
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 16px;
+  letter-spacing: 1px;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.9),
+    0 0 12px rgba(255, 255, 255, 0.7),
+    0 0 16px rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px 24px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 1.4rem;
+    padding: 8px 16px;
+  }
+}
+
+
+section {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section h2 {
+  color: #004080;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section h3 {
+  color: #0056b3;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.about-box {
+  background-color: #6e6d6d;
+  border-left: 5px solid #4C8BF5;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.about-box h2 {
+  margin-bottom: 10px;
+  color: #004080;
+  font-size: 1.6rem;
+}
+
+.about-box p {
+  font-size: 1rem;
+  color: #f3ebeb;
+  line-height: 1.6;
+}
+
+.founder-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* allows stacking */
+}
+
+.founder-image img {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid #004080;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.founder-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* 🔧 Mobile responsiveness */
+@media (max-width: 768px) {
+  .founder-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-image img {
+    margin: 0 auto;
+  }
+
+  .founder-text {
+    padding: 0 10px;
+  }
+}
+
+
+.coach-box {
+  background-color: #ffffff;
+  border: 2px solid #004080;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.coach-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 2px solid #004080;
+}
+
+.coach-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 2px solid #004080;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.coach-flex.reverse {
+  flex-direction: row-reverse;
+}
+
+.coach-flex img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #004080;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.coach-details {
+  flex: 1;
+  min-width: 250px;
+}
+
+.coach-details h3 {
+  color: #004080;
+  margin-bottom: 0.5rem;
+}
+
+.coach-details p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.facility-box {
+  background-color: #ffffff;
+  border: 2px solid #004080;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.facility-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  border: 2px solid #004080;
+}
+
+#achievements {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#achievements h2 {
+  color: #004080;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.achievement-box {
+  background-color: #ffffff;
+  border: 2px solid #004080;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.achievement-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #004080;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.75rem;
+}
+
+.achievement-box p {
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonial {
+  background-color: #ffffff;
+  border-left: 5px solid #004080;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 2px solid #004080;
+}
+
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #004080;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.vertical-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+.vertical-form input {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+}
+
+.vertical-form input:focus {
+  border-color: #004080;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 64, 128, 0.3);
+}
+
+.vertical-form button {
+  background-color: #004080;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.vertical-form button:hover {
+  background-color: #003366;
+}
+
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.image-box {
+  background-color: #ffffff;
+  border: 2px solid #004080;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border: 2px solid #004080;
+}
+
+.image-box h4 {
+  margin: 0.75rem 0 0.25rem;
+  color: #004080;
+  font-size: 1.2rem;
+}
+
+.image-box p {
+  color: #6c757d;
+  font-size: 0.95rem;
+  padding: 0 1rem 1rem;
+}
+
+.eye-banner-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.eye-banner {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #004080;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Glow effect for the main banner image */
+.eye-banner {
+  box-shadow: 0 0 30px rgba(0, 170, 255, 0.8); /* Blue glow */
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.eye-banner:hover {
+  box-shadow: 0 0 50px rgba(0, 170, 255, 1); /* Brighter glow on hover */
+}
+
+/* --- Mobile Responsiveness --- */
+@media screen and (max-width: 768px) {
+  nav ul.navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .coach-flex,
+  .coach-flex.reverse {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .coach-details {
+    padding: 10px;
+  }
+
+  .facilities-grid,
+  .achievements-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 20px 10px;
+  }
+
+  .vertical-form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .vertical-form input,
+  .vertical-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+  }
+
+  .facility-image,
+  .achievement-image,
+  .testimonial-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .eye-banner-section img {
+    width: 100%;
+    height: auto;
+  }
+}
+section h2 {
+  color: white;
+  font-weight: bold;
+}
+.white-heading {
+  color: white;
+  font-weight: bold;
+}
+.section {
+  animation: fadeIn 1s ease-in;
+} 
